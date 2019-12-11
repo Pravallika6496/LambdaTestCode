@@ -57,9 +57,11 @@ public class VerifyRegistrationPage extends CommonMethods
 		compareTitleAndURL("https://accounts.lambdatest.com/login", "Login - LambdaTest");
 		Reporter.log("Signin redirection verified");
 		driver.navigate().back();
-		System.out.println("On signup page");
 	}
 
-	
+	public void invalidScenarios()
+	{
+		
+	}
 
 }
