@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[All the elements are displayed on registration page as expected]]>
+    </line>
+    <line>
+      <![CDATA[LambdaTest Logo redirection verified]]>
+    </line>
+    <line>
+      <![CDATA[Privacy policy redirection verified]]>
+    </line>
+    <line>
+      <![CDATA[Terms of service redirection verified]]>
+    </line>
+    <line>
+      <![CDATA[Signin redirection verified]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="25594" started-at="2019-12-11T12:44:18 IST" finished-at="2019-12-11T12:44:43 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="25594" started-at="2019-12-11T12:44:18 IST" finished-at="2019-12-11T12:44:43 IST">
+      <class name="com.lambdatest.execution.RegistrationPageTestSuite">
+        <test-method status="PASS" signature="instantiateBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@18eed359]" name="instantiateBrowser" is-config="true" duration-ms="11595" started-at="2019-12-11T12:44:18 IST" finished-at="2019-12-11T12:44:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instantiateBrowser -->
+        <test-method status="PASS" signature="VerifyRegistrationPageElements()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@18eed359]" name="VerifyRegistrationPageElements" duration-ms="12668" started-at="2019-12-11T12:44:29 IST" finished-at="2019-12-11T12:44:42 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[All the elements are displayed on registration page as expected]]>
+            </line>
+            <line>
+              <![CDATA[LambdaTest Logo redirection verified]]>
+            </line>
+            <line>
+              <![CDATA[Privacy policy redirection verified]]>
+            </line>
+            <line>
+              <![CDATA[Terms of service redirection verified]]>
+            </line>
+            <line>
+              <![CDATA[Signin redirection verified]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- VerifyRegistrationPageElements -->
+        <test-method status="PASS" signature="killBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@18eed359]" name="killBrowser" is-config="true" duration-ms="1279" started-at="2019-12-11T12:44:42 IST" finished-at="2019-12-11T12:44:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- killBrowser -->
+      </class> <!-- com.lambdatest.execution.RegistrationPageTestSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
