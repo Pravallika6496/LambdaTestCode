@@ -26,7 +26,7 @@ public class RegistrationPageTestSuite extends LambdaProperties {
 		
 		VerifyRegistrationPage.verifyElementsPrescence();
 		VerifyRegistrationPage.verifyRedirectionLinks();
-		VerifyRegistrationPage.invalidScenarios();
+		VerifyRegistrationPage.verifyInvalidScenarios();
 	}
 	
 	@AfterMethod(alwaysRun = true)

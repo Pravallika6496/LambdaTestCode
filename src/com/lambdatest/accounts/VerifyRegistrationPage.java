@@ -31,7 +31,22 @@ public class VerifyRegistrationPage extends CommonMethods
 	protected WebElement signInLink;
 	
 	@FindBy(name = "name")
-	protected WebElement userName;
+	protected WebElement nameField;
+	
+	@FindBy(name = "email")
+	protected WebElement emailField;
+	
+	@FindBy(name = "password")
+	protected WebElement password;
+	
+	@FindBy(name = "organization_name")
+	protected WebElement orgName;
+	
+	@FindBy(name = "phone")
+	protected WebElement phoneNumField;
+	
+	@FindBy(xpath = ".//button[text()='Free Sign Up']")
+	protected WebElement signUpButton;
 		
 	public void verifyElementsPrescence()
 	{
@@ -59,7 +74,7 @@ public class VerifyRegistrationPage extends CommonMethods
 		driver.navigate().back();
 	}
 
-	public void invalidScenarios()
+	public void verifyInvalidScenarios()
 	{
 		
 	}
