@@ -1,12 +1,13 @@
 package com.lambdatest.accounts;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.lambdatest.properties.ui.*;
+import com.lambdatest.properties.ui.CommonMethods;
 
 public class VerifyRegistrationPage extends CommonMethods
 {
@@ -47,6 +48,8 @@ public class VerifyRegistrationPage extends CommonMethods
 	
 	@FindBy(xpath = ".//button[text()='Free Sign Up']")
 	protected WebElement signUpButton;
+	
+	String path=".//src//TestData//VerifyRegistrationPage.xlsx";
 		
 	public void verifyElementsPrescence()
 	{
@@ -73,10 +76,29 @@ public class VerifyRegistrationPage extends CommonMethods
 		Reporter.log("Signin redirection verified");
 		driver.navigate().back();
 	}
-
-	public void verifyInvalidScenarios()
+	
+	public void emptyUserNameTest()
 	{
+		try 
+		{
+			emailField.sendKeys(getCellValue(path, "Sheet1", 2, 1));
+			password.sendKeys(getCellValue(path, "Sheet1", 3, 1));
+			orgName.sendKeys(getCellValue(path, "Sheet1", 4, 1));
+			phoneNumField.sendKeys(getCellValue(path, "Sheet1", 4, 1));
+			signUpButton.click();
+//			WebElement exp = driver.findElement(By.xpath("//p[contains(text(),'Please fill in this field')]"));
+//			if(exp.isDisplayed())
+//				System.out.println(exp.getText());
+//			else
+//				System.out.println("FAIL");
+//			Alert alert=driver.switchTo().alert();
+//			System.out.println("Alert text: " +alert.getText());
+		}
 		
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
 	}
 
 }

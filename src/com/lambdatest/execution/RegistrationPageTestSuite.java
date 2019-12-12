@@ -24,9 +24,9 @@ public class RegistrationPageTestSuite extends LambdaProperties {
 	{
 		VerifyRegistrationPage VerifyRegistrationPage= PageFactory.initElements(driver,VerifyRegistrationPage.class);
 		
-		VerifyRegistrationPage.verifyElementsPrescence();
-		VerifyRegistrationPage.verifyRedirectionLinks();
-		VerifyRegistrationPage.verifyInvalidScenarios();
+//		VerifyRegistrationPage.verifyElementsPrescence();
+//		VerifyRegistrationPage.verifyRedirectionLinks();
+		VerifyRegistrationPage.emptyUserNameTest();
 	}
 	
 	@AfterMethod(alwaysRun = true)

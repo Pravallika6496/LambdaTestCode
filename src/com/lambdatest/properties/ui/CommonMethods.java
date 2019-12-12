@@ -1,8 +1,14 @@
 package com.lambdatest.properties.ui;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -45,6 +51,15 @@ public class CommonMethods {
 		Assert.assertEquals(actualURL, expectedURL, "Expected URL is: "+expectedURL +" and actual URL is: " +actualURL);
 		String actualTitle=driver.getTitle();
 		Assert.assertEquals(actualTitle, expectedTitle, "Expected title is: "+expectedTitle +" and actual title is: " +actualTitle);
+	}
+	
+	public String getCellValue(String path, String sheetName, int rowNum, int colNum) throws EncryptedDocumentException, IOException
+	{
+		FileInputStream fis=new FileInputStream(path);
+		Workbook wb=(Workbook) WorkbookFactory.create(fis);
+		Row row=wb.getSheet(sheetName).getRow(rowNum);
+		String cellValue=row.getCell(colNum).toString();
+		return cellValue;
 	}
 
 }
