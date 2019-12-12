@@ -97,5 +97,24 @@ public class VerifyRegistrationPage extends CommonMethods
 			takeScreenshot("emptyUserNameTestFail");
 		}
 	}
+	
+	public void emptyEmailTest() throws IOException
+	{
+		try 
+		{
+			emailField.clear();
+			nameField.sendKeys(getCellValue(path, "Sheet1", 1, 1));
+			signUpButton.click();
+			compareErrorMessage(emailField, "Please fill out this field.");
+			takeScreenshot("emptyEmailTestPass");
+		}
+		
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+			takeScreenshot("emptyEmailTestFail");
+		}
+	}
+
 
 }
