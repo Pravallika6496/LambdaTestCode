@@ -1,16 +1,22 @@
 package com.lambdatest.properties.ui;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 public class CommonMethods {
 	
@@ -53,6 +59,12 @@ public class CommonMethods {
 		Assert.assertEquals(actualTitle, expectedTitle, "Expected title is: "+expectedTitle +" and actual title is: " +actualTitle);
 	}
 	
+	protected void compareErrorMessage(WebElement element, String expectedErrorMessage) 
+	{
+		String actualErrorMessagae = element.getAttribute("validationMessage");
+		Assert.assertEquals(actualErrorMessagae, expectedErrorMessage, "Expected error is: "+expectedErrorMessage +" and actual error is: " +actualErrorMessagae);
+	}
+	
 	public String getCellValue(String path, String sheetName, int rowNum, int colNum) throws EncryptedDocumentException, IOException
 	{
 		FileInputStream fis=new FileInputStream(path);
@@ -60,6 +72,14 @@ public class CommonMethods {
 		Row row=wb.getSheet(sheetName).getRow(rowNum);
 		String cellValue=row.getCell(colNum).toString();
 		return cellValue;
+	}
+	
+	public void takeScreenshot(String fileName) throws IOException
+	{
+		String filePath="C:\\Users\\pravallika.tambabatt\\eclipse-workspace\\Automation Practice\\target\\Snapshots\\"+fileName +".png";
+		File screenshot=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshot, new File(filePath));
+		Reporter.log("Screenshot at: " +filePath);
 	}
 
 }

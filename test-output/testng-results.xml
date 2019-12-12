@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[All the elements are displayed on registration page as expected]]>
+    </line>
+    <line>
+      <![CDATA[LambdaTest Logo redirection verified]]>
+    </line>
+    <line>
+      <![CDATA[Privacy policy redirection verified]]>
+    </line>
+    <line>
+      <![CDATA[Terms of service redirection verified]]>
+    </line>
+    <line>
+      <![CDATA[Signin redirection verified]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyUserNameTestPass.png]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14996" started-at="2019-12-12T14:44:49 IST" finished-at="2019-12-12T14:45:04 IST">
+  <suite name="Default suite" duration-ms="30885" started-at="2019-12-12T16:03:01 IST" finished-at="2019-12-12T16:03:32 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14996" started-at="2019-12-12T14:44:49 IST" finished-at="2019-12-12T14:45:04 IST">
+    <test name="Default test" duration-ms="30885" started-at="2019-12-12T16:03:01 IST" finished-at="2019-12-12T16:03:32 IST">
       <class name="com.lambdatest.execution.RegistrationPageTestSuite">
-        <test-method status="PASS" signature="instantiateBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@627551fb]" name="instantiateBrowser" is-config="true" duration-ms="11831" started-at="2019-12-12T14:44:50 IST" finished-at="2019-12-12T14:45:01 IST">
+        <test-method status="PASS" signature="instantiateBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="instantiateBrowser" is-config="true" duration-ms="13421" started-at="2019-12-12T16:03:01 IST" finished-at="2019-12-12T16:03:14 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiateBrowser -->
-        <test-method status="PASS" signature="VerifyRegistrationPageElements()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@627551fb]" name="VerifyRegistrationPageElements" duration-ms="1947" started-at="2019-12-12T14:45:01 IST" finished-at="2019-12-12T14:45:03 IST">
+        <test-method status="PASS" signature="VerifyRegistrationPageElements()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="VerifyRegistrationPageElements" duration-ms="16135" started-at="2019-12-12T16:03:14 IST" finished-at="2019-12-12T16:03:30 IST">
           <reporter-output>
+            <line>
+              <![CDATA[All the elements are displayed on registration page as expected]]>
+            </line>
+            <line>
+              <![CDATA[LambdaTest Logo redirection verified]]>
+            </line>
+            <line>
+              <![CDATA[Privacy policy redirection verified]]>
+            </line>
+            <line>
+              <![CDATA[Terms of service redirection verified]]>
+            </line>
+            <line>
+              <![CDATA[Signin redirection verified]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyUserNameTestPass.png]]>
+            </line>
           </reporter-output>
         </test-method> <!-- VerifyRegistrationPageElements -->
-        <test-method status="PASS" signature="killBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@627551fb]" name="killBrowser" is-config="true" duration-ms="1147" started-at="2019-12-12T14:45:03 IST" finished-at="2019-12-12T14:45:04 IST">
+        <test-method status="PASS" signature="killBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="killBrowser" is-config="true" duration-ms="1266" started-at="2019-12-12T16:03:30 IST" finished-at="2019-12-12T16:03:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killBrowser -->

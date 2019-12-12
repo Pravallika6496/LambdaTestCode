@@ -1,6 +1,7 @@
 package com.lambdatest.accounts;
 
-import org.openqa.selenium.By;
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -77,7 +78,7 @@ public class VerifyRegistrationPage extends CommonMethods
 		driver.navigate().back();
 	}
 	
-	public void emptyUserNameTest()
+	public void emptyUserNameTest() throws IOException
 	{
 		try 
 		{
@@ -86,18 +87,14 @@ public class VerifyRegistrationPage extends CommonMethods
 			orgName.sendKeys(getCellValue(path, "Sheet1", 4, 1));
 			phoneNumField.sendKeys(getCellValue(path, "Sheet1", 4, 1));
 			signUpButton.click();
-//			WebElement exp = driver.findElement(By.xpath("//p[contains(text(),'Please fill in this field')]"));
-//			if(exp.isDisplayed())
-//				System.out.println(exp.getText());
-//			else
-//				System.out.println("FAIL");
-//			Alert alert=driver.switchTo().alert();
-//			System.out.println("Alert text: " +alert.getText());
+			compareErrorMessage(nameField, "Please fill out this field.");
+			takeScreenshot("emptyUserNameTestPass");
 		}
 		
 		catch (Exception e) 
 		{
 			e.printStackTrace();
+			takeScreenshot("emptyUserNameTestFail");
 		}
 	}
 

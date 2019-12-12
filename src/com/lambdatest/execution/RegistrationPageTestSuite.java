@@ -1,6 +1,7 @@
 package com.lambdatest.execution;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.*;
@@ -20,12 +21,12 @@ public class RegistrationPageTestSuite extends LambdaProperties {
 	}
 	
 	@Test
-	public void VerifyRegistrationPageElements()
+	public void VerifyRegistrationPageElements() throws IOException
 	{
 		VerifyRegistrationPage VerifyRegistrationPage= PageFactory.initElements(driver,VerifyRegistrationPage.class);
 		
-//		VerifyRegistrationPage.verifyElementsPrescence();
-//		VerifyRegistrationPage.verifyRedirectionLinks();
+		VerifyRegistrationPage.verifyElementsPrescence();
+		VerifyRegistrationPage.verifyRedirectionLinks();
 		VerifyRegistrationPage.emptyUserNameTest();
 	}
 	
