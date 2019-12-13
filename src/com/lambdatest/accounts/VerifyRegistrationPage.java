@@ -155,5 +155,28 @@ public class VerifyRegistrationPage extends CommonMethods
 			takeScreenshot("emptyPhnNumTestFail");
 		}
 	}
+	
+	public void invalidPasswordTest() throws IOException
+	{
+		try 
+		{
+			phoneNumField.sendKeys(getCellValue(path, "Sheet1", 5, 1));
+			password.clear();
+			password.sendKeys(getCellValue(path, "Sheet2", 1, 1));
+			signUpButton.click();
+			password.sendKeys(getCellValue(path, "Sheet2", 2, 1));
+			
+			signUpButton.click();
+			compareErrorMessage(phoneNumField, "Please fill out this field.");
+			Reporter.log("Error message is " +phoneNumField.getAttribute("validationMessage"));
+			takeScreenshot("emptyPhnNumTestPass");
+		}
+		
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+			takeScreenshot("emptyPhnNumTestFail");
+		}
+	}
 
 }

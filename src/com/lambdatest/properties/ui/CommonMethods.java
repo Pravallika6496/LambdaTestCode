@@ -27,6 +27,14 @@ public class CommonMethods {
 		CommonMethods.driver = d;
 	}
 	
+	protected void invalidErrorCheck(WebElement element, String data, WebElement signUpButton)
+	{
+		element.clear();
+		element.sendKeys(data);
+		signUpButton.click();
+		Reporter.log("Error message is " +element.getAttribute("validationMessage"));
+	}
+	
 	protected void compareNewTabTitleAndURL(String expectedURL, String expectedTitle)
 	{
 		String mainWindow = driver.getWindowHandle();
