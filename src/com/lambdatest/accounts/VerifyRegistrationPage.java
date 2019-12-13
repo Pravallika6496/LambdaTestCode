@@ -85,9 +85,10 @@ public class VerifyRegistrationPage extends CommonMethods
 			emailField.sendKeys(getCellValue(path, "Sheet1", 2, 1));
 			password.sendKeys(getCellValue(path, "Sheet1", 3, 1));
 			orgName.sendKeys(getCellValue(path, "Sheet1", 4, 1));
-			phoneNumField.sendKeys(getCellValue(path, "Sheet1", 4, 1));
+			phoneNumField.sendKeys(getCellValue(path, "Sheet1", 5, 1));
 			signUpButton.click();
 			compareErrorMessage(nameField, "Please fill out this field.");
+			Reporter.log("Error message is " +nameField.getAttribute("validationMessage"));
 			takeScreenshot("emptyUserNameTestPass");
 		}
 		
@@ -106,6 +107,7 @@ public class VerifyRegistrationPage extends CommonMethods
 			nameField.sendKeys(getCellValue(path, "Sheet1", 1, 1));
 			signUpButton.click();
 			compareErrorMessage(emailField, "Please fill out this field.");
+			Reporter.log("Error message is " +emailField.getAttribute("validationMessage"));
 			takeScreenshot("emptyEmailTestPass");
 		}
 		
@@ -115,6 +117,43 @@ public class VerifyRegistrationPage extends CommonMethods
 			takeScreenshot("emptyEmailTestFail");
 		}
 	}
+	
+	public void emptyPasswordTest() throws IOException
+	{
+		try 
+		{
+			password.clear();
+			emailField.sendKeys(getCellValue(path, "Sheet1", 2, 1));
+			signUpButton.click();
+			compareErrorMessage(password, "Please fill out this field.");
+			Reporter.log("Error message is " +password.getAttribute("validationMessage"));
+			takeScreenshot("emptyPasswordTestPass");
+		}
+		
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+			takeScreenshot("emptyPasswordTestFail");
+		}
+	}
 
+	public void emptyPhnNumTest() throws IOException
+	{
+		try 
+		{
+			phoneNumField.clear();
+			password.sendKeys(getCellValue(path, "Sheet1", 3, 1));
+			signUpButton.click();
+			compareErrorMessage(phoneNumField, "Please fill out this field.");
+			Reporter.log("Error message is " +phoneNumField.getAttribute("validationMessage"));
+			takeScreenshot("emptyPhnNumTestPass");
+		}
+		
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+			takeScreenshot("emptyPhnNumTestFail");
+		}
+	}
 
 }

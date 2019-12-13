@@ -17,19 +17,40 @@
       <![CDATA[Signin redirection verified]]>
     </line>
     <line>
+      <![CDATA[Error message is Please fill out this field.]]>
+    </line>
+    <line>
       <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyUserNameTestPass.png]]>
     </line>
+    <line>
+      <![CDATA[Error message is Please fill out this field.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyEmailTestPass.png]]>
+    </line>
+    <line>
+      <![CDATA[Error message is Please fill out this field.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyPasswordTestPass.png]]>
+    </line>
+    <line>
+      <![CDATA[Error message is Please fill out this field.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyPhnNumTestPass.png]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30885" started-at="2019-12-12T16:03:01 IST" finished-at="2019-12-12T16:03:32 IST">
+  <suite name="Default suite" duration-ms="29385" started-at="2019-12-13T12:19:36 IST" finished-at="2019-12-13T12:20:05 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30885" started-at="2019-12-12T16:03:01 IST" finished-at="2019-12-12T16:03:32 IST">
+    <test name="Default test" duration-ms="29385" started-at="2019-12-13T12:19:36 IST" finished-at="2019-12-13T12:20:05 IST">
       <class name="com.lambdatest.execution.RegistrationPageTestSuite">
-        <test-method status="PASS" signature="instantiateBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="instantiateBrowser" is-config="true" duration-ms="13421" started-at="2019-12-12T16:03:01 IST" finished-at="2019-12-12T16:03:14 IST">
+        <test-method status="PASS" signature="instantiateBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="instantiateBrowser" is-config="true" duration-ms="11697" started-at="2019-12-13T12:19:36 IST" finished-at="2019-12-13T12:19:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiateBrowser -->
-        <test-method status="PASS" signature="VerifyRegistrationPageElements()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="VerifyRegistrationPageElements" duration-ms="16135" started-at="2019-12-12T16:03:14 IST" finished-at="2019-12-12T16:03:30 IST">
+        <test-method status="PASS" signature="VerifyRegistrationPageElements()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="VerifyRegistrationPageElements" duration-ms="16458" started-at="2019-12-13T12:19:48 IST" finished-at="2019-12-13T12:20:04 IST">
           <reporter-output>
             <line>
               <![CDATA[All the elements are displayed on registration page as expected]]>
@@ -47,11 +68,32 @@
               <![CDATA[Signin redirection verified]]>
             </line>
             <line>
+              <![CDATA[Error message is Please fill out this field.]]>
+            </line>
+            <line>
               <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyUserNameTestPass.png]]>
+            </line>
+            <line>
+              <![CDATA[Error message is Please fill out this field.]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyEmailTestPass.png]]>
+            </line>
+            <line>
+              <![CDATA[Error message is Please fill out this field.]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyPasswordTestPass.png]]>
+            </line>
+            <line>
+              <![CDATA[Error message is Please fill out this field.]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot at: C:\Users\pravallika.tambabatt\eclipse-workspace\Automation Practice\target\Snapshots\emptyPhnNumTestPass.png]]>
             </line>
           </reporter-output>
         </test-method> <!-- VerifyRegistrationPageElements -->
-        <test-method status="PASS" signature="killBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="killBrowser" is-config="true" duration-ms="1266" started-at="2019-12-12T16:03:30 IST" finished-at="2019-12-12T16:03:32 IST">
+        <test-method status="PASS" signature="killBrowser()[pri:0, instance:com.lambdatest.execution.RegistrationPageTestSuite@50b494a6]" name="killBrowser" is-config="true" duration-ms="1177" started-at="2019-12-13T12:20:04 IST" finished-at="2019-12-13T12:20:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killBrowser -->
