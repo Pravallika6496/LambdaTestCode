@@ -161,14 +161,14 @@ public class VerifyRegistrationPage extends CommonMethods
 		try 
 		{
 			phoneNumField.sendKeys(getCellValue(path, "Sheet1", 5, 1));
-			password.clear();
-			password.sendKeys(getCellValue(path, "Sheet2", 1, 1));
-			signUpButton.click();
-			password.sendKeys(getCellValue(path, "Sheet2", 2, 1));
 			
+			invalidErrorCheck(phoneNumField, getCellValue(path, "Sheet1", 5, 1), signUpButton);
+			
+			password.sendKeys(getCellValue(path, "Sheet2", 2, 1));
 			signUpButton.click();
-			compareErrorMessage(phoneNumField, "Please fill out this field.");
-			Reporter.log("Error message is " +phoneNumField.getAttribute("validationMessage"));
+			Reporter.log("Error message is " +password.getAttribute("validationMessage"));
+			
+			
 			takeScreenshot("emptyPhnNumTestPass");
 		}
 		
