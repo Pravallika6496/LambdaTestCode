@@ -168,7 +168,6 @@ public class VerifyRegistrationPage extends CommonMethods
 			signUpButton.click();
 			Reporter.log("Error message is " +password.getAttribute("validationMessage"));
 			
-			
 			takeScreenshot("emptyPhnNumTestPass");
 		}
 		
